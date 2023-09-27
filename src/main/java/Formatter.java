@@ -2,8 +2,8 @@ public class Formatter {
 
     public String formatSum(float sum) {
         int num = (int)sum;
-        var penultimateNumber = num % 100 / 10;
-        var lastNumber = num % 10;
+        int penultimateNumber = num % 100 / 10;
+        int lastNumber = num % 10;
 
         if (penultimateNumber == 1) {
             return "рублей";
@@ -12,7 +12,9 @@ public class Formatter {
         switch (lastNumber) {
             case 1:
                 return "рубль";
-            case 2, 3, 4:
+            case 2:
+            case 3:
+            case 4:
                 return "рубля";
         }
 
